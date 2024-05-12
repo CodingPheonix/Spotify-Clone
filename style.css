@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    width: 20%;
+    height: 100%;
+    margin: 5px 5px;
+}
+
+.right {
+    width: 75%;
+    margin: 5px 5px;
+    border-radius: 7px;
+}
+
+.first {
+    border-radius: 7px;
+    min-height: 30%;
+    height: auto;
+    background-color: #121212;
+}
+
+.first .logo, .first ul li {
+    width: 1rem;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    margin: 2px 6px;
+}
+
+.first .logo {
+    padding-top: 1rem;
+}
+
+.first img {
+    filter: invert(1);
+}
+
+.first ul li p {
+    font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+/* Second Section */
+.second {
+    height: 65%;
+    width: 100%;
+    background-color: #121212;
+}
