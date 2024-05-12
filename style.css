@@ -1,3 +1,7 @@
+:root{
+    --grey: rgb(139 139 139);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,10 +9,10 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     background-color: black;
-    color: white;
+    color: var(--grey);
 }
 
 .container {
@@ -17,25 +21,28 @@ body {
 }
 
 .left {
-    width: 20%;
-    height: 100%;
+    width: 25vw;
+    height: 100vh;
     margin: 5px 5px;
 }
 
 .right {
-    width: 75%;
+    width: 70vw;
+    height: 100vh;
     margin: 5px 5px;
     border-radius: 7px;
+    background-color: #121212;
 }
 
 .first {
     border-radius: 7px;
-    min-height: 30%;
-    height: auto;
+    height: 30%;
     background-color: #121212;
+    padding: 0 1rem;
 }
 
-.first .logo, .first ul li {
+.first .logo,
+.first ul li {
     width: 1rem;
     list-style: none;
     display: flex;
@@ -58,9 +65,84 @@ body {
     padding: 1rem;
 }
 
-/* Second Section */
 .second {
     height: 65%;
+    min-height: 70vh;
+    border-radius: 10px;
+    margin: .7rem 0;
     width: 100%;
     background-color: #121212;
+    padding: 0 1rem;
+}
+
+.lib ul {
+    height: 10%;
+    padding: 1.4rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.lib ul p {
+    padding: .5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.lib span {
+    padding: 0 7px;
+}
+
+.lib img {
+    filter: invert(1);
+}
+
+.create {
+    height: 3rem;
+    background-color: rgb(33 33 33);
+    font-weight: 700;
+    color: white;
+    border-radius: 7px;
+}
+
+.options ul li,
+.options a {
+    width: auto;
+    color: var(--grey);
+    list-style: none;
+    font-size: 11px;
+    padding: .5rem;
+    position: relative;
+    bottom: 0;
+}
+
+.right nav {
+    height: 15%;
+    padding: 0 1rem;
+}
+
+.tleft img {
+    height: 2rem;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.tright button{
+    height: 3rem;
+    width: 5.2rem;
+    border: 1px solid white;
+    margin: 5px;
+    border-radius: 10px;
+    font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.tright .signup{
+    background-color: transparent;
+    color: var(--grey);
+    border: black;
 }

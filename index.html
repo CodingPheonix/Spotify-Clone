@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
 </head>
+
 <body>
     <div class="container">
         <div class="left">
             <div class="first">
                 <div class="logo"><img src="svg/logo.svg" alt="Spotify"></div>
                 <ul>
-                    <li><img src="svg/home.svg" alt="Home"><p>Home</p></li>
-                    <li><img src="svg/search.svg" alt="Search"><p>Search</p></li>
+                    <li><img src="svg/home.svg" alt="Home">
+                        <p>Home</p>
+                    </li>
+                    <li><img src="svg/search.svg" alt="Search">
+                        <p>Search</p>
+                    </li>
                 </ul>
             </div>
             <div class="second bg-grey">
-                
+                <div class="lib">
+                    <ul>
+                        <li class="flex items-center"><img src="svg/library.svg" alt="library"></img>
+                            <p>Your Library</p>
+                        </li>
+                        <li><img src="svg/add.svg" alt="add"></li>
+                    </ul>
+                </div>
+
+                <div class="create flex justify-center items-center">Create your first playlist</div>
+
+                <div class="options">
+                    <ul class="flex flex-wrap">
+                        <li>Legal</li>
+                        <li>Safety & Privacy Center</li>
+                        <li>Privacy Policy</li>
+                        <li>cookies</li>
+                        <li>About Ads</li>
+                        <li>Accesibility</li>
+                    </ul>
+                    <a href="#">Cookies</a>
+                </div>
             </div>
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <nav class="flex justify-between items-center">
+                <div class="tleft flex">
+                    <img class="invert" src="svg/arrow-left.svg" alt="arrow-left">
+                    <img class="invert" src="svg/arrow-right.svg" alt="arrow-right">
+                </div>
+                <div class="tright flex">
+                    <button class="signup">Sign up</button>
+                    <button class="login">Log in</button>
+                </div>
+            </nav>
+        </div>
     </div>
 </body>
+
 </html>
