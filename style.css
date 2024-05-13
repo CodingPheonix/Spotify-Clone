@@ -1,5 +1,7 @@
-:root{
+:root {
     --grey: rgb(139 139 139);
+    --grey1: rgb(33 33 33);
+    --green: rgb(0, 255, 0);
 }
 
 * {
@@ -23,16 +25,18 @@ body {
 
 .left {
     width: 25vw;
-    min-height: 100vh;
+    min-height: 90vh;
     margin: 5px 5px;
+    position: relative;
 }
 
 .right {
     width: 70vw;
-    min-height: 100vh;
+    min-height: 90vh;
     margin: 5px 5px;
     border-radius: 7px;
     background-color: #121212;
+    position: relative;
 }
 
 .first {
@@ -131,7 +135,7 @@ body {
     background-color: white;
 }
 
-.tright button{
+.tright button {
     height: 3rem;
     width: 5.2rem;
     border: 1px solid white;
@@ -141,49 +145,54 @@ body {
     font-weight: 700;
 }
 
-.tright .signup{
+.tright .signup {
     background-color: transparent;
     color: var(--grey);
     border: black;
 }
 
-.playlists{
+.playlists {
     padding: 1rem;
     gap: 1rem;
 }
-h2{
+
+h2 {
     color: white;
     font-size: 24px;
     font-weight: 700;
     margin-left: 1rem;
 }
 
-.card{
+.card {
     height: 17rem;
     width: 12rem;
     /* background-color: grey; */
 }
 
-.card>img{
+.card>img {
     width: 100%;
     border-radius: 10px;
     object-fit: contain;
 }
-.card p{
+
+.card p {
     font-size: 12px;
 }
-.card h3{
+
+.card h3 {
     font-size: 1rem;
     color: white;
 }
-.card p, .card h3{
+
+.card p,
+.card h3 {
     padding-top: 5px;
 }
 
 .play-cont {
-    width: 40px; 
+    width: 40px;
     height: 40px;
-    background-color: rgb(0, 255, 0);
+    background-color: var(--green);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -193,10 +202,29 @@ h2{
     right: -133px;
     opacity: 0;
 }
-.play-cont:hover{
+
+.play-cont:hover {
     opacity: 1;
     transition: all .5s ease-in;
 }
-.play-cont .play{
+
+.play-cont .play {
     padding: .6rem;
+}
+
+.playbar{
+    background-color: var(--grey1);
+    height: 3rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.song-tools svg{
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--green);
+    border-radius: 50%;
+    padding: 5px;
 }
