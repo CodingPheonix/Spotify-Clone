@@ -38,3 +38,11 @@
 .rounded{
     border-radius: 7px;
 }
+
+.border{
+    border: 1px solid #ffffff;
+}
+
+.padding{
+    padding: .5rem;
+}
