@@ -1,7 +1,10 @@
 :root {
-    --grey: rgb(139 139 139);
-    --grey1: rgb(33 33 33);
-    --green: rgb(0, 255, 0);
+    --text-font: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+    --text-font2: CircularSpTitle, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+
+    --pri-col: black;
+    --sec-col: rgb(18, 18, 18);
+    --ter-col: rgb(53, 53, 53);
 }
 
 * {
@@ -11,220 +14,98 @@
 }
 
 body {
-    /* width: 100vw;
-    height: 100vh; */
-    background-color: black;
-    color: var(--grey);
-    font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
+    background-color: var(--pri-col);
+    height: 100vh;
 }
 
-.container {
+aside {
+    width: 21%;
+    height: 97%;
+    background-color: var(--pri-col);
+}
+
+main {
+    width: 77%;
+    height: 97%;
+    background-color: var(--sec-col);
+}
+
+.home {
+    height: 27%;
+    background-color: var(--sec-col);
+    color: white;
+    font-size: 12px;
+    font-family: var(--text-font);
+    align-items: flex-start;
+}
+
+.home * {
+    padding: 0 10px;
+}
+
+.library {
+    height: 70%;
+    background-color: var(--sec-col);
+    color: rgb(102, 102, 102);
+    font-size: 16px;
+    font-family: var(--text-font);
+    font-weight: 700;
+    font-family: var(--text-font);
+}
+
+.library header * {
+    margin: 15px;
+}
+
+.library>p {
+    padding: 15px;
+    background-color: var(--ter-col);
+    width: 90%;
+    color: white;
+}
+
+main header * {
+    color: white;
+    padding: 10px;
+}
+
+.direction * {
+    border-radius: 50%;
+}
+
+.user * {
+    height: 3rem;
+    width: 6.5rem;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
-}
-
-.left {
-    width: 25vw;
-    min-height: 90vh;
-    margin: 5px 5px;
-    position: relative;
-}
-
-.right {
-    width: 70vw;
-    min-height: 90vh;
-    margin: 5px 5px;
-    border-radius: 7px;
-    background-color: #121212;
-    position: relative;
-}
-
-.first {
-    border-radius: 7px;
-    height: 30%;
-    background-color: #121212;
-    padding: 0 1rem;
-}
-
-.first .logo,
-.first ul li {
-    width: 1rem;
-    list-style: none;
-    display: flex;
-    gap: 5px;
-    margin: 2px 6px;
-}
-
-.first .logo {
-    padding-top: 1rem;
-}
-
-.first img {
-    filter: invert(1);
-}
-
-.first ul li p {
-    font-family: CircularSp, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, "Helvetica Neue", helvetica, arial, "Hiragino Kaku Gothic ProN", Meiryo, "MS Gothic";
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 1rem;
-}
-
-.second {
-    height: 65%;
-    min-height: 70vh;
-    border-radius: 10px;
-    margin: .7rem 0;
-    width: 100%;
-    background-color: #121212;
-    padding: 0 1rem;
-}
-
-.lib ul {
-    height: 10%;
-    padding: 1.4rem 0.5rem;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    list-style: none;
-}
-
-.lib ul p {
-    padding: .5rem;
+    font-weight: 700;
     font-size: 1rem;
-    font-weight: 700;
+    font-family: var(--text-font);
 }
 
-.lib span {
-    padding: 0 7px;
+.lists {
+    min-height: 50%;
+    background-image: linear-gradient(to bottom, rgb(36, 36, 36), var(--sec-col), var(--sec-col));
 }
 
-.lib img {
-    filter: invert(1);
-}
-
-.create {
-    height: 3rem;
-    background-color: rgb(33 33 33);
-    font-weight: 700;
-    color: white;
-    border-radius: 7px;
-}
-
-.options ul li,
-.options a {
-    width: auto;
-    color: var(--grey);
-    list-style: none;
-    font-size: 11px;
-    padding: .5rem;
-    position: relative;
-    bottom: 0;
-}
-
-.right nav {
-    height: 15%;
-    padding: 0 1rem;
-}
-
-.tleft img {
-    height: 2rem;
-    padding: 4px;
-    margin: 5px;
-    border-radius: 100%;
-    background-color: white;
-}
-
-.tright button {
-    height: 3rem;
-    width: 5.2rem;
-    border: 1px solid white;
-    margin: 5px;
-    border-radius: 38px;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.tright .signup {
-    background-color: transparent;
-    color: var(--grey);
-    border: black;
-}
-
-.playlists {
-    padding: 1rem;
-    gap: 1rem;
-}
-
-h2 {
-    color: white;
+.lists h1{
+    padding: 1rem 1rem;
+    font-family: var(--text-font2);
     font-size: 24px;
     font-weight: 700;
-    margin-left: 1rem;
-}
-
-.card {
-    height: 17rem;
-    width: 12rem;
-    /* background-color: grey; */
-}
-
-.card>img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: contain;
-}
-
-.card p {
-    font-size: 12px;
-}
-
-.card h3 {
-    font-size: 1rem;
     color: white;
 }
 
-.card p,
-.card h3 {
-    padding-top: 5px;
+.card{
+    /* background-color: rgb(56, 56, 56); */
+    width: 12rem;
+    height: 15rem;
+    margin: 1rem;
+    color: white;
 }
 
-.play-cont {
-    width: 40px;
-    height: 40px;
-    background-color: var(--green);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: -179px;
-    right: -133px;
-    opacity: 0;
-}
-
-.play-cont:hover {
-    opacity: 1;
-    transition: all .5s ease-in;
-}
-
-.play-cont .play {
-    padding: .6rem;
-}
-
-.playbar{
-    background-color: var(--grey1);
-    height: 3rem;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    border-radius: 0 0 10px 10px;
-}
-
-.song-tools svg{
-    width: 2rem;
-    height: 2rem;
-    background-color: var(--green);
-    border-radius: 50%;
-    padding: 5px;
+.card *{
+    padding: 0 1rem;
 }

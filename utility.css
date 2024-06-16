@@ -21,6 +21,12 @@
 .items-center {
     align-items: center;
 }
+.items-start{
+    align-items: flex-start;
+}
+.flex-col{
+    flex-direction: column;
+}
 
 .flex-wrap{
     flex-wrap: wrap;
@@ -28,4 +34,7 @@
 
 .invert{
     filter: invert(1);
+}
+.rounded{
+    border-radius: 7px;
 }
