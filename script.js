@@ -43,6 +43,7 @@ async function main() {
     playButtons.forEach(button => {
         button.addEventListener("click", event => {
             let song = event.target.getAttribute("data-song"); //target says the particular element
+            curr_song = songs.indexOf(song)
             playMusic(song);
         });
     });
@@ -64,7 +65,6 @@ async function main() {
     }
 
     //Access the play buttons
-
     play.addEventListener("click", () => {
         if (audio.paused) {
             audio.play()
@@ -73,6 +73,18 @@ async function main() {
             audio.pause()
             play.src = "svg/play-circle.svg"
         }
+    })
+
+    // ADD PREVIOUS AND NEXT PLAY-BUTTON EVENT LISTENERS
+
+    document.getElementById("previous").addEventListener("click", ()=>{
+        curr_song = (curr_song - 1 + songs.length) % songs.length
+        playMusic(songs[curr_song])
+    })
+
+    document.getElementById("next").addEventListener("click", ()=>{
+        curr_song = (curr_song + 1) % songs.length
+        playMusic(songs[curr_song])
     })
 
     //Add time update
@@ -107,7 +119,13 @@ async function main() {
     //     document.querySelector(".circle").style.left = (e.offsetX / e.target.getBoundingClientRect().width) * 100 + "%"
     // })
 
-    
+    // ADJUSTING THE HAMBURGER MENU (QUERY SELECTORS)
+    document.querySelector(".hamburger").addEventListener("click", ()=>{
+        document.getElementsByTagName("aside")[0].style.left = `0`
+    })
+    document.querySelector(".cross").addEventListener("click", ()=>{
+        document.getElementsByTagName("aside")[0].style.left = `-100%`
+    })
 }
 
 main()

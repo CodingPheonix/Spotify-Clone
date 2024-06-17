@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify clone</title>
+    <title>'Spotify - Web Player: Music for everyone'</title>
     <link rel="icon" href="Assets/Images/Spotify-logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
@@ -13,7 +13,10 @@
     <aside class="flex flex-col justify-evenly">
         <!-- Left-top Portion -->
         <div class="home rounded flex flex-col justify-evenly">
-            <img class="invert" src="svg/logo.svg" alt="page logo">
+            <div class="head flex justify-between items-center">
+                <img class="invert" src="svg/logo.svg" alt="page logo">
+                <img class="cross invert" src="svg/cross.svg" alt="cross">
+            </div>
             <grp class="flex ">
                 <img class="invert" src="svg/home.svg" alt="home">
                 <h2>Home</h2>
@@ -53,17 +56,43 @@
         </header>
         <!-- Playlists -->
         <div class="lists">
-            <div class=".head flex justify-between items-center">
+            <div class="playlist-head flex justify-between items-center">
                 <h1>Spotify Playlists</h1>
                 <img class="hamburger invert" src="svg/hamburger.svg" alt="3-lines">
             </div>
-            <div class="playlist flex">
+            <div class="playlist flex flex-wrap">
                 <!-- card 1 -->
                 <div class="card flex flex-col justify-evenly items-start rounded">
-                    <img style="height: 10rem;" class="rounded" src="Assets/Images/playlist-img.jpeg" alt="thumbnail">
+                    <img class="rounded" src="Assets/Images/playlist-img.jpeg" alt="thumbnail">
                     <h3 style="font-size: 16px;">Dinner with Friends</h3>
                     <p style="font-size: 13px;">Just lean back and enjoy with friends</p>
                 </div>
+                <div class="card flex flex-col justify-evenly items-start rounded">
+                    <img class="rounded" src="Assets/Images/playlist-img.jpeg" alt="thumbnail">
+                    <h3 style="font-size: 16px;">Dinner with Friends</h3>
+                    <p style="font-size: 13px;">Just lean back and enjoy with friends</p>
+                </div>
+                <div class="card flex flex-col justify-evenly items-start rounded">
+                    <img class="rounded" src="Assets/Images/playlist-img.jpeg" alt="thumbnail">
+                    <h3 style="font-size: 16px;">Dinner with Friends</h3>
+                    <p style="font-size: 13px;">Just lean back and enjoy with friends</p>
+                </div>
+                <div class="card flex flex-col justify-evenly items-start rounded">
+                    <img class="rounded" src="Assets/Images/playlist-img.jpeg" alt="thumbnail">
+                    <h3 style="font-size: 16px;">Dinner with Friends</h3>
+                    <p style="font-size: 13px;">Just lean back and enjoy with friends</p>
+                </div>
+                <div class="card flex flex-col justify-evenly items-start rounded">
+                    <img class="rounded" src="Assets/Images/playlist-img.jpeg" alt="thumbnail">
+                    <h3 style="font-size: 16px;">Dinner with Friends</h3>
+                    <p style="font-size: 13px;">Just lean back and enjoy with friends</p>
+                </div>
+                <div class="card flex flex-col justify-evenly items-start rounded">
+                    <img class="rounded" src="Assets/Images/playlist-img.jpeg" alt="thumbnail">
+                    <h3 style="font-size: 16px;">Dinner with Friends</h3>
+                    <p style="font-size: 13px;">Just lean back and enjoy with friends</p>
+                </div>
+                
             </div>
         </div>
         <!-- playbar -->
