@@ -232,9 +232,4 @@ main header * {
         width: 95%;
         height: 15rem;
     }
-    .playlist{
-        /* flex-direction: column; */
-        /* overflow: auto;
-        height: auto; */
-    }
   }
