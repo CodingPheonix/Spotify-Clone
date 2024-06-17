@@ -92,6 +92,10 @@ main header * {
     background-image: linear-gradient(to bottom, rgb(36, 36, 36), var(--sec-col), var(--sec-col));
 }
 
+.hamburger{
+    display: none;
+    padding-right: 1rem;
+}
 .lists h1 {
     padding: 1rem 1rem;
     font-family: var(--text-font2);
@@ -118,6 +122,25 @@ main header * {
     bottom: 0;
     background-image: linear-gradient(to bottom, var(--ter-col), var(--sec-col));
     padding: 0.7rem 1rem;
+}
+.playbar .controls{
+    position: fixed;
+}
+.playbar img{
+    cursor: pointer;
+    height: 30px;
+}
+
+.playbar .songinfo, .playbar .songduration{
+    height: 2rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: .5rem;
+    font-family: var(--text-font2);
+    font-size: 12px;
 }
 
 .controls img {
@@ -158,15 +181,30 @@ main header * {
     border-radius: 10px;
     position: absolute;
     bottom: 2px;
+    cursor: pointer;
 }
 
 .circle{
     height: .7rem;
     width: .7rem;
     border-radius: 50%;
-    background-color: var(--green);
+    background-color: white;
     position: absolute;
     left: -2px;
-    bottom:-4px;
+    bottom:-5px;
     transition: left .5s;
 }
+
+@media (max-width: 1200px) {
+    aside{
+        position: absolute;
+        left: -100%;
+        transition: left .5s;
+    }
+    main{
+        width: 100%;
+    }
+    .hamburger{
+        display: block;
+    }
+  }

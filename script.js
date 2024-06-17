@@ -1,4 +1,6 @@
 console.log("Lets write some javascript")
+let audio = new Audio();
+let play = document.getElementById("play")
 
 async function getsongs() {
     //fetch api
@@ -19,7 +21,6 @@ async function getsongs() {
 }
 async function main() {
 
-    let currentsong;
     //get the list of all the songs   
     let songs = await getsongs()
     //add songs to the list
@@ -45,11 +46,68 @@ async function main() {
             playMusic(song);
         });
     });
+    // play music
     function playMusic(song) {
-        let audio = new Audio(`http://127.0.0.1:5500/Songs/${song}`);
+        audio.src = `http://127.0.0.1:5500/Songs/${song}`
         audio.play();
-        currentsong = audio;
+        play.src = "svg/pause.svg"
+        document.querySelector(".songinfo").innerHTML = song.replaceAll("%20", " ");
+        audio.addEventListener("timeupdate", () => {
+            const currentTime = audio.currentTime;
+            const duration = audio.duration;
+            const formattedCurrentTime = formatTime(currentTime);
+            const formattedDuration = formatTime(duration);
+            
+            document.querySelector(".songduration").innerHTML = `${formattedCurrentTime} / ${formattedDuration}`;
+            document.querySelector(".circle").style.left = `${(currentTime / duration) * 100}%`;
+        })
     }
+
+    //Access the play buttons
+
+    play.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play()
+            play.src = "svg/pause.svg"
+        } else {
+            audio.pause()
+            play.src = "svg/play-circle.svg"
+        }
+    })
+
+    //Add time update
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    function getFormattedTimes(currentTime, duration) {
+        const formattedCurrentTime = formatTime(currentTime);
+        const formattedDuration = formatTime(duration);
+        return { formattedCurrentTime, formattedDuration };
+    }
+    
+    // Add event listner to trackbar
+    document.querySelector(".track").addEventListener("click", (e) => {
+        const track = e.target;
+        const rect = track.getBoundingClientRect();  //returns the size of an element and its position relative to the viewport. It provides various properties like the height, width, top, right, bottom, left.
+        const offsetX = e.offsetX;
+        const trackWidth = rect.width;
+        const newTime = (offsetX / trackWidth) * audio.duration;
+
+        document.querySelector(".circle").style.left = (offsetX / trackWidth) * 100 + "%";
+        audio.currentTime = newTime;
+    });
+
+    //ALTERNATIVELY, THIS CAN BE USED AS A SINGLE LINER(THIS IS WITHOUT THE TIME UPDATE)
+    
+    // document.querySelector(".track").addEventListener("click", e =>{
+    //     document.querySelector(".circle").style.left = (e.offsetX / e.target.getBoundingClientRect().width) * 100 + "%"
+    // })
+
+    
 }
 
 main()

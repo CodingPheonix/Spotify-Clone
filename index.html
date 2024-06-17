@@ -53,7 +53,10 @@
         </header>
         <!-- Playlists -->
         <div class="lists">
-            <h1>Spotify Playlists</h1>
+            <div class=".head flex justify-between items-center">
+                <h1>Spotify Playlists</h1>
+                <img class="hamburger invert" src="svg/hamburger.svg" alt="3-lines">
+            </div>
             <div class="playlist flex">
                 <!-- card 1 -->
                 <div class="card flex flex-col justify-evenly items-start rounded">
@@ -64,12 +67,14 @@
             </div>
         </div>
         <!-- playbar -->
-        <div class="playbar flex justify-center items-center">
+        <div class="playbar flex justify-around items-center">
+            <div style="padding-right: 15rem;" class="songinfo"></div>
             <div class="controls">
-                <img src="svg/previous.svg" alt="previous">
-                <img src="svg/play-circle.svg" alt="play">
-                <img src="svg/next.svg" alt="next">
+                <img id="previous" src="svg/previous.svg" alt="previous">
+                <img id="play" src="svg/play-circle.svg" alt="play">
+                <img id="next" src="svg/next.svg" alt="next">
             </div>
+            <div class="songduration"></div>
             <!-- track and circle -->
             <div class="track">
                 <div class="circle"></div>
